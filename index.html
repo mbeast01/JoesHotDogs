@@ -11,10 +11,12 @@
 <body>
     <h1>Welcome to Joe's Hotdog Stand!</h1>
     <h2>Menu</h2>
-    <p> Hot Dog: 4.65 </p>
-    <p> French Fries: 3.75.65 </p>
+    <p> Hot Dog 4.65 </p>
+    <p> French Fries 3.75 </p>
+    <p> Soda 1.89 </p>
     <button id="orderNow">Order Now!</button>
     <script>
+         document.getElementById("orderButton").addEventListener("click", function() {
         const PriceHotdog = 4.65;
         const PriceFries = 3.75;
         const PriceDrink = 1.89;
@@ -22,11 +24,10 @@
         function showMoney(num) {
             return (Math.round(num * 100) / 100);
         }
-        document.getElementById("orderButton").addEventListener("click", function() {
+       
             var numDogs = parseInt(prompt("How many hotdogs would you like?"), 10);
             var numFries = parseInt(prompt("How many orders of fries would you like?"), 10);
             var numSoda = parseInt(prompt("How many drinks would you like?"), 10);
-        }
         
 
         var subtotal = (numDogs * PriceHotdog) + (numFries * PriceFries) + (numSoda * PriceDrink);
@@ -41,6 +42,8 @@
         document.write("<p>Hot Dogs: " + numDogs + " --- $" + showMoney(numDogs * PriceHotdog) + "<p>");
         document.write("<p>French Fries: " + numFries + " --- $" + showMoney(numFries * PriceFries) + "<p>");
         document.write("<p>Sodas: " + numSoda + " --- $" + showMoney(numSoda * PriceDrink) +  "<p>");
+         });
+
     </script>
 </body>
 </html>
