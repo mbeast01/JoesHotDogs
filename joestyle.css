@@ -2,7 +2,15 @@
 
 body{
     font-family: monospace;
-    background-color: red;
+    background-color: ffaf8c;
+}
 
+h2 {
+    margin-top: 20%; 
+    text-align: center;
+}
+
+p {
+    text-align: center;
 }
 
