@@ -42,10 +42,10 @@
         var taxAmount = subTotal * 0.0625;
         var finalAmount = taxAmount + subTotal;
 
-        document.write('<h2> Order Information: </h2>');
-        document.write('<p id="menuitem">' 'Hotdogs ' + numDogs + 'x: ' + ' ---> $' + showMoney(numDogs * PriceDog) + '</p>');
-        document.write('<p id="menuitem">' 'French Fries ' + numFries + 'x: ' + ' ---> $' + showMoney(numfries * PriceFries) + '</p>');
-        document.write('<p id="menuitem">' 'Sodas ' + numSoda + 'x: ' + ' ---> $' + showMoney(numSoda * PriceSoda) + '</p>');
+        document.write("<h2> Order Information: </h2>");
+        document.write("<p> Hotdogs " + numDogs + "x: " + " ---> $" + showMoney(numDogs * PriceDog) + "</p>");
+        document.write("<p> French Fries " + numFries + "x: " + " ---> $" + showMoney(numFries * PriceFries) + "</p>");
+        document.write("<p> Sodas " + numSoda + "x: " + " ---> $" + showMoney(numSoda * PriceSoda) +  "</p>");
         if (!(discount == 0)) {
             document.write("<p> Subtotal(pre discount): " + showMoney(preSubtotal) + "<p>");
             document.write("<p> Discount: " + showMoney(discount) + "<p>");
