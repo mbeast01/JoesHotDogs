@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joe's Hotdog Stand</title>
+    
+    <style>
+    </style>
+</head>
+<body>
+    <h1>Welcome to Joe's Hotdog Stand!</h1>
+    <script>
+        const PriceHotdog = 4.65;
+        const PriceFries = 3.75;
+        const PriceDrink = 1.89;
+        
+        function showMoney(num) {
+            return (Math.round(num * 100) / 100);
+        }
+
+        var numDogs = parseInt(prompt("How many hotdogs would you like?"), 10);
+        var numFries = parseInt(prompt("How many orders of fries would you like?"), 10);
+        var numSoda = parseInt(prompt("How many drinks would you like?"), 10);
+        
+
+        var subtotal = (numDogs * PriceHotdog) + (numFries * PriceFries) + (numSoda * PriceDrink);
+
+        var discount = 0;
+        if (subtotal >= 25) {
+            discount = subtotal * 0.10;
+            subtotal -= discount;
+        }
+
+        document.write("<h2>Order Information: </h2>");
+        document.write("<p>Hot Dogs: " + numDogs + " --- $" + showMoney(numDogs * PriceHotdog) + "<p>");
+        document.write("<p>French Fries: " + numFries + " --- $" + showMoney(numFries * PriceFries) + "<p>");
+        document.write("<p>Sodas: " + numSoda + " --- $" + showMoney(numSoda * PriceDrink) +  "<p>");
+    </script>
+</body>
+</html>
