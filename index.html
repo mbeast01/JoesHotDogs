@@ -6,11 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Joe's Hotdog Stand</title>
     
-    <link rel="stylesheet" type="text/css" href="joestyle.css"> 
+    <style>
+    body {
+        font-family: monospace;
+        text-align: center;
+        background-color: rgb(252, 126, 200); /*light pink*/
+    }
+
+    h1 {
+      color: blue;
+    }
+  </style> 
 </head>
 
 <body>
-    <h1>Welcome to Joe's Hotdog Stand!</h1>
+    <h1 >Welcome to Joe's Hotdog Stand!</h1>
         <script>
             const PriceDog = 4.65;
             const PriceFries = 3.75;
@@ -47,15 +57,14 @@
             document.write("<p> French Fries " + numFries + "x: " + " ---> $" + showMoney(numFries * PriceFries) + "</p>");
             document.write("<p> Sodas " + numSoda + "x: " + " ---> $" + showMoney(numSoda * PriceSoda) +  "</p>");
             if (!(discount == 0)) {
-                document.write("<p> Subtotal(pre discount): " + showMoney(preSubtotal) + "<p>");
-                document.write("<p> Discount: " + showMoney(discount) + "<p>");
-                document.write("<p> New Subtotal: " + showMoney(subTotal) + "<p>");
+                document.write("<p> Subtotal(pre discount): " + showMoney(preSubtotal) + "</p>");
+                document.write("<p> Discount: " + showMoney(discount) + "</p>");
+                document.write("<p> New Subtotal: " + showMoney(subTotal) + "</p>");
             } else {
-                document.write("<p> Subtotal: " + showMoney(subTotal) + "<p>");
+                document.write("<p> Subtotal: " + showMoney(subTotal) + "</p>");
             }
-            document.write("<p> Massachuesetts Sales Tax: " + showMoney(taxAmount) + "<p>");
-            document.write("<p> Total: " + showMoney(finalAmount) + "<p>");
-                
+            document.write("<p> Massachuesetts Sales Tax: " + showMoney(taxAmount) + "</p>");
+            document.write("<p> Total: " + showMoney(finalAmount) + "</p>");
     
         </script>
 </body>
