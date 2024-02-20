@@ -10,53 +10,53 @@
 </head>
 
 <body>
-        <h1>Welcome to Joe's Hotdog Stand!</h1>
-    <script>
-        const PriceDog = 4.65;
-        const PriceFries = 3.75;
-        const PriceSoda = 1.89;
-        
-        function showMoney(num) {
-            var rounded = (Math.round((num * 100)))/100;
-            var result = rounded.toString();
-            if (result.indexOf('.') === -1) {
-                result += '.00';
-            } else if (result.indexOf('.') === result.length - 2) {
-                result += '0';
-            }
-            return result;
-        }
-       
-            var numDogs = parseInt(prompt("How many hotdogs would you like?"));
-            var numFries = parseInt(prompt("How many orders of fries would you like?"));
-            var numSoda = parseInt(prompt("How many drinks would you like?"));
-
-        var preSubtotal = (numDogs * PriceDog) + (numFries * PriceFries) + (numSoda * PriceSoda);
-        var subTotal = preSubtotal;
-        var discount = 0;
-        if (preSubtotal >= 25) {
-            discount = preSubtotal * 0.10;
-            subTotal -= discount;
-        }
-
-        var taxAmount = subTotal * 0.0625;
-        var finalAmount = taxAmount + subTotal;
-
-        document.write("<h2> Order Information: </h2>");
-        document.write("<p> Hotdogs " + numDogs + "x: " + " ---> $" + showMoney(numDogs * PriceDog) + "</p>");
-        document.write("<p> French Fries " + numFries + "x: " + " ---> $" + showMoney(numFries * PriceFries) + "</p>");
-        document.write("<p> Sodas " + numSoda + "x: " + " ---> $" + showMoney(numSoda * PriceSoda) +  "</p>");
-        if (!(discount == 0)) {
-            document.write("<p> Subtotal(pre discount): " + showMoney(preSubtotal) + "<p>");
-            document.write("<p> Discount: " + showMoney(discount) + "<p>");
-            document.write("<p> New Subtotal: " + showMoney(subTotal) + "<p>");
-        } else {
-            document.write("<p> Subtotal: " + showMoney(subTotal) + "<p>");
-        }
-        document.write("<p> Massachuesetts Sales Tax: " + showMoney(taxAmount) + "<p>");
-        document.write("<p> Total: " + showMoney(finalAmount) + "<p>");
+    <h1>Welcome to Joe's Hotdog Stand!</h1>
+        <script>
+            const PriceDog = 4.65;
+            const PriceFries = 3.75;
+            const PriceSoda = 1.89;
             
-
-    </script>
+            function showMoney(num) {
+                var rounded = (Math.round((num * 100)))/100;
+                var result = rounded.toString();
+                if (result.indexOf('.') === -1) {
+                    result += '.00';
+                } else if (result.indexOf('.') === result.length - 2) {
+                    result += '0';
+                }
+                return result;
+            }
+           
+                var numDogs = parseInt(prompt("How many hotdogs would you like?"));
+                var numFries = parseInt(prompt("How many orders of fries would you like?"));
+                var numSoda = parseInt(prompt("How many drinks would you like?"));
+    
+            var preSubtotal = (numDogs * PriceDog) + (numFries * PriceFries) + (numSoda * PriceSoda);
+            var subTotal = preSubtotal;
+            var discount = 0;
+            if (preSubtotal >= 25) {
+                discount = preSubtotal * 0.10;
+                subTotal -= discount;
+            }
+    
+            var taxAmount = subTotal * 0.0625;
+            var finalAmount = taxAmount + subTotal;
+    
+            document.write("<h2> Order Information: </h2>");
+            document.write("<p> Hotdogs " + numDogs + "x: " + " ---> $" + showMoney(numDogs * PriceDog) + "</p>");
+            document.write("<p> French Fries " + numFries + "x: " + " ---> $" + showMoney(numFries * PriceFries) + "</p>");
+            document.write("<p> Sodas " + numSoda + "x: " + " ---> $" + showMoney(numSoda * PriceSoda) +  "</p>");
+            if (!(discount == 0)) {
+                document.write("<p> Subtotal(pre discount): " + showMoney(preSubtotal) + "<p>");
+                document.write("<p> Discount: " + showMoney(discount) + "<p>");
+                document.write("<p> New Subtotal: " + showMoney(subTotal) + "<p>");
+            } else {
+                document.write("<p> Subtotal: " + showMoney(subTotal) + "<p>");
+            }
+            document.write("<p> Massachuesetts Sales Tax: " + showMoney(taxAmount) + "<p>");
+            document.write("<p> Total: " + showMoney(finalAmount) + "<p>");
+                
+    
+        </script>
 </body>
 </html>
