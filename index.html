@@ -20,14 +20,21 @@
     h1 {
         color: rgb(16, 20, 56); /*navy*/
         margin-top: 10%;
+        background-color: rgb(204, 210, 255);
         
     }
     div {
         background-color: rgb(204, 210, 255); /*light blue*/
         margin-top: 10%;
         padding-top: 20 px;
-        width: 35%;
     }
+    .center {
+        border: 5px solid;
+        border-color: rgb(16, 20, 56); 
+        margin: auto;
+        width: 50%;
+        padding: 10px;
+}
   </style> 
 </head>
 
@@ -63,7 +70,7 @@
     
             var taxAmount = subTotal * 0.0625;
             var finalAmount = taxAmount + subTotal;
-            document.write("<div class = 'orderSummary'>");
+            document.write("<div class = 'center'>");
             document.write("<h2> Order Information: </h2>");
             document.write("<p> Hotdogs " + numDogs + "x: " + " ---> $" + showMoney(numDogs * PriceDog) + "</p>");
             document.write("<p> French Fries " + numFries + "x: " + " ---> $" + showMoney(numFries * PriceFries) + "</p>");
