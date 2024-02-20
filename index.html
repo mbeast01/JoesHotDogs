@@ -16,7 +16,9 @@
     <p> Soda 1.89 </p>
     <button id="orderNow">Order Now!</button>
     <script>
-         document.getElementById("orderButton").addEventListener("click", function() {
+        var button = document.getElementById("orderNow");
+        
+        button.addEventListener("click", function() {
         const PriceHotdog = 4.65;
         const PriceFries = 3.75;
         const PriceDrink = 1.89;
@@ -42,7 +44,7 @@
         document.write("<p>Hot Dogs: " + numDogs + " --- $" + showMoney(numDogs * PriceHotdog) + "<p>");
         document.write("<p>French Fries: " + numFries + " --- $" + showMoney(numFries * PriceFries) + "<p>");
         document.write("<p>Sodas: " + numSoda + " --- $" + showMoney(numSoda * PriceDrink) +  "<p>");
-         });
+        });
 
     </script>
 </body>
