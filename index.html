@@ -19,9 +19,9 @@
         var button = document.getElementById("orderNow");
         
         button.addEventListener("click", function() {
-        const PriceHotdog = 4.65;
+        const PriceDog = 4.65;
         const PriceFries = 3.75;
-        const PriceDrink = 1.89;
+        const PriceSoda = 1.89;
         
         function showMoney(num) {
             return (Math.round(num * 100) / 100);
@@ -30,12 +30,11 @@
             var numDogs = parseInt(prompt("How many hotdogs would you like?"), 10);
             var numFries = parseInt(prompt("How many orders of fries would you like?"), 10);
             var numSoda = parseInt(prompt("How many drinks would you like?"), 10);
-        
 
-        var preSubtotal = (numDogs * PriceHotdog) + (numFries * PriceFries) + (numSoda * PriceDrink);
+        var preSubtotal = (numDogs * PriceDog) + (numFries * PriceFries) + (numSoda * PriceSoda);
         var subTotal = preSubtotal;
         var discount = 0;
-        if (subtotal >= 25) {
+        if (preSubtotal >= 25) {
             discount = preSubtotal * 0.10;
             subTotal -= discount;
         }
@@ -44,9 +43,9 @@
         var finalAmount = taxAmount + subTotal;
 
         document.write("<h2>Order Information: </h2>");
-        document.write("<p>" + numDogs + "x: " + " ---> $" + showMoney(numDogs * PriceHotdog) + "<p>");
-        document.write("<p>" + numFries + "x: " + " ---> $" + showMoney(numFries * PriceFries) + "<p>");
-        document.write("<p>" + numSoda + "x: " + " ---> $" + showMoney(numSoda * PriceDrink) +  "<p>");
+        document.write("<p>" + numDogs + "x: " + " ---> $" + showMoney(numDogs * PriceDog) + "</p>");
+        document.write("<p>" + numFries + "x: " + " ---> $" + showMoney(numFries * PriceFries) + "</p>");
+        document.write("<p>" + numSoda + "x: " + " ---> $" + showMoney(numSoda * PriceSoda) +  "</p>");
         if (!(discount == 0)) {
             document.write("<p> Subtotal(pre discount): " + preSubtotal + "<p>");
             document.write("<p> Discount: " + discount + "<p>");
