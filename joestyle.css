@@ -2,9 +2,12 @@
 
 body{
     font-family: monospace;
-    background-color: ffaf8c;
+    background-color: #FFAF8C;
 }
-
+h1 {
+    margin-top: 5%;
+    text-align:center;
+}
 h2 {
     margin-top: 20%; 
     text-align: center;
